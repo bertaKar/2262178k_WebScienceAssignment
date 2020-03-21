@@ -13,7 +13,7 @@ The repository contains "Twitter" scraper/data crawler and network analysis soft
 * freqCluster.py
 * tie_triad.py
 * #### Data
- * importScript.sh <sub><sup> (Script to import sample data into local database) </sub></sup>
+  * importScript.sh <sub><sup> (Script to import sample data into local database) </sub></sup>
   * MostMentioned.txt <sub><sup>(List of most mentioned users in the dataset)</sub></sup>
   * clusterAndOverallData.txt <sub><sup>(Contains information about most interracted users and hashtags for overall and cluster data)</sub></sup>
   * TiesAndTriads.txt <sub><sup>(Contains information about ties and triads in overall and cluster data)</sub></sup>
