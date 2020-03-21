@@ -10,8 +10,8 @@ try:
     ##connecting to the database
 
     client = MongoClient("mongodb://bertaKar:bertaKarpwd@127.0.0.1:27017")
-    db = client["bertaDB"]
-    collection = db["REAL"]
+    db = client["CoronaDB"]
+    collection = db["CoronaTweets"]
 
     print("Connected successfully!!!")
 except pymongo.errors.ServerSelectionTimeoutError as err:
@@ -30,7 +30,7 @@ api = tweepy.API(auth)
 
 ##Retrieve tweets from three top most mentioned users
 
-for status in tweepy.Cursor(api.user_timeline, id="Jabinbotsford").items(50):
+for status in tweepy.Cursor(api.user_timeline, id="_Dillionnn").items(50):
     try:
 
         hashtagsToStore = []
@@ -76,7 +76,7 @@ for status in tweepy.Cursor(api.user_timeline, id="Jabinbotsford").items(50):
     except pymongo.errors.DuplicateKeyError:
         pass
 
-for status in tweepy.Cursor(api.user_timeline, id="realdonaldtrump").items(50):
+for status in tweepy.Cursor(api.user_timeline, id="CNNIndonesia").items(50):
 
     try:
         hashtagsToStore = []
@@ -123,7 +123,7 @@ for status in tweepy.Cursor(api.user_timeline, id="realdonaldtrump").items(50):
     except pymongo.errors.DuplicateKeyError:
         pass
 
-for status in tweepy.Cursor(api.user_timeline, id="Jbarro").items(50):
+for status in tweepy.Cursor(api.user_timeline, id="casanovanghju").items(50):
     try:
         hashtagsToStore = []
         userMentions = []
