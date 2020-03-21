@@ -19,8 +19,8 @@ import os
 try:
     ##Connect to the database
     client = MongoClient("mongodb://bertaKar:bertaKarpwd@127.0.0.1:27017")
-    db = client["bertaDB"]
-    collection = db["CORONA12"]
+    db = client["CoronaDB"]
+    collection = db["CoronaTweets"]
 
     print("Connected successfully!!!")
 except pymongo.errors.ServerSelectionTimeoutError as err:
@@ -34,9 +34,9 @@ checked = []
 
 ## Loop through each cluster and count how many times every user has mentioned someone else and store it in the database
 
-for i in range(4):
+for i in range(5):
     checked = []
-    collection_name = "generalCluster" + str(i)
+    collection_name = "GeneralCluster" + str(i)
     col = db[collection_name]
     for tweet in collection.find():
         if tweet["cluster"] == i:
@@ -61,9 +61,9 @@ for i in range(4):
 
 
 ## Loop through each cluster and count how many times every user has retweeted someone else and store it in the database
-for i in range(4):
+for i in range(5):
     checked = []
-    collection_name = "retweetCluster" + str(i)
+    collection_name = "RetweetCluster" + str(i)
     col = db[collection_name]
 
     for tweet in collection.find():
@@ -93,7 +93,7 @@ for i in range(4):
 
 for i in range(5):
     checked = []
-    collection_name = "quotedCluster" + str(i)
+    collection_name = "QuotedCluster" + str(i)
     col = db[collection_name]
 
     for tweet in collection.find():
@@ -131,9 +131,9 @@ for i in range(5):
 
 ## Loop through each cluster and check what hashtags appeared together and store it in the database
 
-for i in range(4):
+for i in range(5):
     checked = []
-    collection_name = "hashtagsCluster" + str(i)
+    collection_name = "HashtagsCluster" + str(i)
     col = db[collection_name]
 
     for tweet in collection.find():
