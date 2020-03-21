@@ -19,8 +19,8 @@ import os
 try:
     ##Connect to the database
     client = MongoClient("mongodb://bertaKar:bertaKarpwd@127.0.0.1:27017")
-    db = client["bertaDB"]
-    collection = db["REAL"]
+    db = client["CoronaDB"]
+    collection = db["CoronaTweets"]
 
     print("Connected successfully!!!")
 except pymongo.errors.ServerSelectionTimeoutError as err:
@@ -47,7 +47,7 @@ df.set_index('_id', inplace=True)
 t0 = time.time()
 
 # MiniBatch section
-mb = MiniBatchKMeans(n_clusters=6, init='k-means++', n_init=10, batch_size=3000)
+mb = MiniBatchKMeans(n_clusters=5, init='k-means++', n_init=10, batch_size=1000)
 data = df[["hashedText", "created_at"]].values
 mb.fit(data)
 df['mb_cluster'] = mb.labels_   # Add labels back into DataFrame
@@ -78,11 +78,11 @@ df1 = df[['text', 'cluster']]
 
 df.sort_values("cluster", inplace=True)
 
+print(df)
+
 ## Save the assigned clusters to the database
 
 for index, frame in df.iterrows():
     for tweet in collection.find():
         if frame["username"] == tweet["username"]:
             collection.update_one({'_id': tweet["_id"]}, {"$set": {"cluster": frame["cluster"]}}, upsert=False, array_filters=None)
-
-
