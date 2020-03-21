@@ -1,9 +1,10 @@
 ### Tools used:
-Python 3.8.2. ,  tweepy
+Python 3.8.2., Tweepy 3.8.0., Pymongo 3.10.1
+ 
+### Description
+The repository contains "Twitter" scraper/data crawler and network analysis software. This software 
 
-### The repository contains "Twitter" scraper/data crawler and network analysis software.
-
-#### The repository is comprised of 9 scripts:
+##### The repository is comprised of 8 scripts and a Data file:
 * scraper.py
 * mostMentioned.py
 * rest.py
@@ -11,4 +12,14 @@ Python 3.8.2. ,  tweepy
 * freq.py
 * freqCluster.py
 * tie_triad.py
-* importScript.sh
+* #### Data
+  * MostMentioned.txt
+  * TiesAndTriads.txt
+
+### How To Import Sample Data
+
+### How To Use This Software
+
+
+### Data File
+
