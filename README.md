@@ -24,7 +24,21 @@ It is not neccesary to import sample data. While running the scripts your databa
 ### How To Use This Software
 Once all eight scripts have been changed to connect to your own database (See section "Connecting to your own database") you can run the software. 
 
-Firstly, run the script <b> "scraper.py" </b>. This script populates the initial collection "CoronaTweets" with real time data with the streamer object. This script can be left to run for as long as needed. The longer it runs the more tweets it will retrieve. <b> If you already imported sample data, this script will add more tweets to the sample data collection </b>.
+1. Run the script <b> "scraper.py" </b>. This script populates the initial collection "CoronaTweets" with real time data with the streamer object. This script can be left to run for as long as needed. The longer it runs the more tweets it will retrieve. <b> If you already imported sample data, this script will add more tweets to the sample data collection </b>.
+
+2. Run the script <b> "mostMentioned.py" </b>. This script will produce a text file of the most mentioned users within the collection and the frequencies of how many times they were mentioned. Extract top three most mentioned users for step 3. Results are printed out into an external file "MostMentioned.txt".
+
+3. Script <b> "rest.py" </b> contains code with REST API to retrieve tweets from the top three most mentioned users' timelines. The users can be specified in the code.
+
+4. Run <b> "cluster.py" </b>. This script contains clustering algorithms to group tweets into separate clusters based on the time they were tweeted and their text content.
+
+5. Run <b> "freq.py" </b>. This script will calculate for each user what other users and how many times this user has mentioned someone else in their tweets. This script will generate data only on the overall main data which is stored in "CoronaTweets" collection. The script will produce 4 extra collections because it will count frequencies of general mentions, retweets, quoted/replies and hashtags.
+
+6. Run <b> "freqCluster.py" </b>. This script will produce the same result as the previous frequency script but it is run for individual clusters.
+
+7. Run <b> "countCluster.py" </b>. This script calculates how many items are in each cluster. Furthermore, this cluster find the users that have interracted most with other users for overall data and cluster data separately. Moreover, this script calculates which hashtag has appeared with the most other hashtags in the same tweet for each cluster separately. Results are printed out into an external file "clusterAndOverallData.txt".
+
+8. Run <b> "tie_triad.py" </b>. This script calculates ties and triads for overall data for general interractions, retweets and quoted/replies and for each cluster. The calculated results are printed out into a separate file called "TiesAndTriads.txt". However, all triads are printed out into the terminal instead.
 
 ##### The repository is comprised of 8 scripts and a Data folder:
 * scraper.py
@@ -33,6 +47,7 @@ Firstly, run the script <b> "scraper.py" </b>. This script populates the initial
 * cluster.py
 * freq.py
 * freqCluster.py
+* countClusters.py
 * tie_triad.py
 * #### Data
   * importScript.sh <sub><sup> (Script to import sample data into local database) </sub></sup>
