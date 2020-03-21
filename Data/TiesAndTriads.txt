@@ -1,0 +1,78 @@
+FOR GENERAL INTERRACTION ON OVERALL DATA
+Number of total ties: 2257
+Number of unique ties: 2215
+Number of triads: 0.0
+FOR GENERAL INTERRACTION ON EACH CLUSTER
+CLUSTER0
+Number of total ties: 391
+Number of unique ties: 389
+Number of triads: 0.0
+CLUSTER1
+Number of total ties: 468
+Number of unique ties: 464
+Number of triads: 0.0
+CLUSTER2
+Number of total ties: 438
+Number of unique ties: 438
+Number of triads: 0.0
+CLUSTER3
+Number of total ties: 442
+Number of unique ties: 441
+Number of triads: 0.0
+CLUSTER4
+Number of total ties: 518
+Number of unique ties: 483
+Number of triads: 0.0
+FOR RETWEET INTERRACTION ON OVERALL DATA
+Number of total ties: 1287
+Number of unique ties: 1271
+Number of triads: 0.0
+ 
+FOR RETWEET INTERRACTION ON EACH CLUSTER
+CLUSTER0
+Number of total ties: 214
+Number of unique ties: 212
+Number of triads: 0.0
+CLUSTER1
+Number of total ties: 301
+Number of unique ties: 299
+Number of triads: 0.0
+CLUSTER2
+Number of total ties: 260
+Number of unique ties: 260
+Number of triads: 0.0
+CLUSTER3
+Number of total ties: 223
+Number of unique ties: 223
+Number of triads: 0.0
+CLUSTER4
+Number of total ties: 289
+Number of unique ties: 277
+Number of triads: 0.0
+ 
+FOR QUOTED/REPLY INTERRACTION ON OVERALL DATA
+Number of total ties: 438
+Number of unique ties: 421
+Number of triads: 0.0
+ 
+FOR QUOTED/REPLY INTERRACTION ON EACH CLUSTER
+CLUSTER0
+Number of total ties: 66
+Number of unique ties: 66
+Number of triads: 0.0
+CLUSTER1
+Number of total ties: 87
+Number of unique ties: 86
+Number of triads: 0.0
+CLUSTER2
+Number of total ties: 82
+Number of unique ties: 82
+Number of triads: 0.0
+CLUSTER3
+Number of total ties: 78
+Number of unique ties: 77
+Number of triads: 0.0
+CLUSTER4
+Number of total ties: 125
+Number of unique ties: 110
+Number of triads: 0.0
