@@ -19,8 +19,8 @@ import os
 try:
     ##Connect to the database
     client = MongoClient("mongodb://bertaKar:bertaKarpwd@127.0.0.1:27017")
-    db = client["bertaDB"]
-    collection = db["CORONA12"]
+    db = client["CoronaDB"]
+    collection = db["CoronaTweets"]
 
     print("Connected successfully!!!")
 except pymongo.errors.ServerSelectionTimeoutError as err:
@@ -30,7 +30,7 @@ except pymongo.errors.ServerSelectionTimeoutError as err:
 checked = []
 
 ## Count how many times every user has mentioned someone else and store it in the database
-col = db["general"]
+col = db["General"]
 
 for tweet in collection.find():
     frequencies = {}
@@ -55,7 +55,7 @@ for tweet in collection.find():
 checked = []
 
 ## Count how many times every user has retweeted someone else and store it in the database
-col = db["retweet"]
+col = db["Retweet"]
 
 for tweet in collection.find():
     frequencies = {}
@@ -81,7 +81,7 @@ for tweet in collection.find():
 checked = []
 
 ## Count how many times every user has quoted or replied to someone else and store it in the database
-col = db["quoted"]
+col = db["Quoted"]
 
 for tweet in collection.find():
     frequencies = {}
@@ -117,7 +117,7 @@ for tweet in collection.find():
 checked = []
 
 ## Check what hashtags appeared together and store it in the database
-col = db["hashtags"]
+col = db["Hashtags"]
 
 for tweet in collection.find():
     hashtags = tweet["hashtags"]
