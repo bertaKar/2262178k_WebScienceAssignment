@@ -8,8 +8,8 @@ from pymongo.errors import ConnectionFailure
 try:
     ##connecting to the database
     client = MongoClient("mongodb://bertaKar:bertaKarpwd@127.0.0.1:27017")
-    db = client["bertaDB"]
-    collection = db["REAL"]
+    db = client["CoronaDB"]
+    collection = db["CoronaTweets"]
 
     print("Connected successfully!!!")
 except pymongo.errors.ServerSelectionTimeoutError as err:
@@ -103,4 +103,3 @@ myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
 ## Run the streamer on the keyword "Corona"
 
 myStream.filter(track=['Corona'], is_async=True)
-
